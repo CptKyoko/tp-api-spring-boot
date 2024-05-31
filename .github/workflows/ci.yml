@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: target/*.jar
+          path: target/app.jar
 
   test:
     runs-on: ubuntu-latest
@@ -59,7 +59,7 @@ jobs:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
           RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
         run: |
-          JAR_FILE=sl-api.jar
+          JAR_FILE=$(ls target/app.jar)
           curl -X POST \
           -H "Accept: application/json" \
           -H "Authorization: Bearer $RENDER_API_KEY" \
