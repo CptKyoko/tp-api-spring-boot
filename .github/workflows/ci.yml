@@ -66,4 +66,4 @@ jobs:
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
           RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
-        run: ./render deploy --service-id $RENDER_SERVICE_ID --artifact target/*.jar
+        run: render deploy --service-id $RENDER_SERVICE_ID --artifact target/*.jar
