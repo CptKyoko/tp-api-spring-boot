@@ -54,9 +54,14 @@ jobs:
           name: java-app
           path: target/
 
-      - name: Install Render CLI
-        run: curl -fsSL https://render.com/download-cli | bash
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
 
+      - name: Install Render CLI
+        run: npm install -g render-cli
+        
       - name: Deploy to Render
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
