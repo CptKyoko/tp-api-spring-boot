@@ -71,7 +71,8 @@ public class WebSecurityConfig {
 	                    String[] allowedOrigins = {
 	                            "http://localhost:8100",
 	                            "https://localhost",
-								"https://0.0.0.0:8100"
+								"https://0.0.0.0:8100",
+								"http://0.0.0.0:8100"
 	                    };
 	                    String[] exposedHeaders = {
 	                            HttpHeaders.ACCESS_CONTROL_ALLOW_CREDENTIALS,
