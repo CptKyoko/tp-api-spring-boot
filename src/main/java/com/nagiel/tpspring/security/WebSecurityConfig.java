@@ -1,7 +1,6 @@
 package com.nagiel.tpspring.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -71,7 +70,8 @@ public class WebSecurityConfig {
 	                    CorsConfiguration cors = new CorsConfiguration();
 	                    String[] allowedOrigins = {
 	                            "http://localhost:8100",
-	                            "https://localhost"
+	                            "https://localhost",
+								"https://0.0.0.0:8100"
 	                    };
 	                    String[] exposedHeaders = {
 	                            HttpHeaders.ACCESS_CONTROL_ALLOW_CREDENTIALS,

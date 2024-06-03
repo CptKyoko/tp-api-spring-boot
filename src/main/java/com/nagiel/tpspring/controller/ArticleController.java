@@ -5,7 +5,6 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,7 +29,6 @@ public class ArticleController {
     * Read - Get all articles
     * @return - An Iterable object of Article full filled
     */
-	@CrossOrigin(origins = "http://0.0.0.0:8100")
     @GetMapping("/articles")
     public Iterable<Article> getArticles() {
         return articleService.getArticles();
