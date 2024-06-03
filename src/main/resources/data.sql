@@ -1,5 +1,4 @@
-MERGE INTO roles (id, name) KEY(id) VALUES
-  (1, 'ROLE_ADMIN'),
-  (2, 'ROLE_MODERATOR'),
-  (3, 'ROLE_USER');
+MERGE INTO roles KEY(id) VALUES (1, 'ROLE_ADMIN');
+MERGE INTO roles KEY(id) VALUES (2, 'ROLE_MODERATOR');
+MERGE INTO roles KEY(id) VALUES (3, 'ROLE_USER');
 
