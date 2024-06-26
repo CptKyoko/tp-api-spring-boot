@@ -9,5 +9,4 @@ public class TpspringApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TpspringApplication.class, args);
 	}
-
 }
